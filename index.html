@@ -284,7 +284,7 @@ footer a{color:#C9D5E2}
    </ul>
    <p style="margin:26px 0 0;color:#C9D5E2">Prefer email? Write directly to <a href="mailto:steliosmed93@gmail.com?subject=Free%20assessment%20request" style="color:#40C4B4;font-weight:700">steliosmed93@gmail.com</a></p>
   </div>
-  <form action="https://formsubmit.co/steliosmed93@gmail.com" method="POST">
+  <form id="assessForm" action="https://formsubmit.co/steliosmed93@gmail.com" method="POST">
    <input type="hidden" name="_subject" value="New project inquiry from your website">
    <input type="hidden" name="_template" value="table">
    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -306,6 +306,7 @@ footer a{color:#C9D5E2}
    </div>
    <label>Your project<textarea name="message" required placeholder="Topic, deadline, and where you need help"></textarea></label>
    <button class="btn" type="submit">Send for free assessment</button>
+   <p id="formStatus" role="status" style="margin:0;font-weight:600;color:#1F8F82"></p>
    <p class="small" style="margin:0">Your message goes directly to Dr. Chatziioannou and is treated confidentially.</p>
   </form>
  </div>
@@ -318,5 +319,24 @@ footer a{color:#C9D5E2}
   <span><a href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">YouTube</a> &middot; <a href="https://orcid.org/0009-0008-6394-1891" target="_blank" rel="noopener">ORCID</a> &middot; <a href="https://www.researchgate.net/profile/Stylianos-Chatziioannou-2" target="_blank" rel="noopener">ResearchGate</a></span>
  </div>
 </footer>
+<script>
+(function(){
+ var f=document.getElementById('assessForm'), st=document.getElementById('formStatus');
+ if(!f) return;
+ f.addEventListener('submit', function(e){
+  e.preventDefault();
+  var d=new FormData(f), b=f.querySelector('button[type=submit]');
+  b.disabled=true; b.textContent='Sending...'; st.style.color='#1F8F82'; st.textContent='';
+  var body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nType of review: '+d.get('review_type')+'\nStage: '+d.get('stage')+'\n\n'+d.get('message');
+  var mailto='mailto:steliosmed93@gmail.com?subject='+encodeURIComponent('Free assessment request from '+d.get('name'))+'&body='+encodeURIComponent(body);
+  var ctrl=new AbortController(); var t=setTimeout(function(){ctrl.abort();},9000);
+  fetch('https://formsubmit.co/ajax/steliosmed93@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:d,signal:ctrl.signal})
+   .then(function(r){clearTimeout(t); if(!r.ok) throw new Error('bad'); return r.json();})
+   .then(function(){ f.reset(); st.textContent='Thank you! Your request was sent. You will receive a reply within 48 hours.'; })
+   .catch(function(){ st.style.color='#14213A'; st.innerHTML='Your email app is opening with your message ready to send. If nothing opens, please email <a href="'+mailto+'">steliosmed93@gmail.com</a>.'; window.location.href=mailto; })
+   .finally(function(){ b.disabled=false; b.textContent='Send for free assessment'; });
+ });
+})();
+</script>
 </body>
 </html>
