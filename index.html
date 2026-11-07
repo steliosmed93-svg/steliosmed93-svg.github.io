@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review Consulting | Systematic, Scoping &amp; Literature Reviews, Meta-Analysis</title>
+<meta name="description" content="Methodological support for systematic reviews, scoping reviews, literature reviews and meta-analysis by Dr. Stylianos Sergios Chatziioannou, MD, MBA, 2MSc, PhD(c). Free, confidential project assessment within 48 hours.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='40' fill='%230E2038'/%3E%3Cpolygon points='100,30 124,66 76,66' fill='%2340C4B4'/%3E%3Cpolygon points='73,72 127,72 148,104 52,104' fill='%23F5F7FA'/%3E%3Cpolygon points='48,110 152,110 172,142 28,142' fill='%23F5F7FA' fill-opacity='.7'/%3E%3C/svg%3E">
+<meta property="og:title" content="Review Consulting | Dr. Chatziioannou">
+<meta property="og:description" content="Systematic, scoping and literature reviews plus meta-analysis. Free, confidential project assessment within 48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E2038;--navy2:#163050;--teal:#40C4B4;--teal-d:#1F8F82;--ink:#14213A;--muted:#55657A;--bg:#F5F7FA;--line:#DDE4EC;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+a{color:var(--teal-d)}a:hover{color:var(--navy)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(14,32,56,.97);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:800;letter-spacing:-.01em}
+.brand:hover{color:#fff}
+.brand svg{width:38px;height:38px}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{color:#D5DEE8;text-decoration:none;font-weight:500;font-size:15px}
+.nav ul a:hover{color:var(--teal)}
+.btn{display:inline-block;background:var(--teal);color:var(--navy);font-weight:700;text-decoration:none;padding:13px 24px;border-radius:999px;border:0;font-size:16px;cursor:pointer;font-family:inherit}
+.btn:hover{background:#5ad3c4;color:var(--navy)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn.ghost:hover{border-color:var(--teal);color:var(--teal)}
+.nav .btn{padding:9px 18px;font-size:14px}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--navy),var(--navy2));color:#fff;padding:84px 0 92px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:48px;align-items:center}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+h1{font-size:clamp(34px,5vw,56px);line-height:1.08;letter-spacing:-.025em;margin:0 0 20px;font-weight:800}
+h1 em{font-style:normal;color:var(--teal)}
+.hero p.lead{font-size:19px;color:#C9D5E2;max-width:600px;margin:0 0 30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mark{display:flex;justify-content:center}
+.hero-mark svg{width:min(340px,80vw);height:auto}
+.trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px;color:#9FB3C8;font-size:14px}
+.trust strong{color:#fff;display:block;font-size:15px}
+/* sections */
+section{padding:84px 0}
+.alt{background:var(--bg)}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 14px;font-weight:800;color:var(--navy)}
+.sub{color:var(--muted);max-width:680px;margin:0 0 44px;font-size:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px}
+.card h3{margin:14px 0 8px;font-size:20px;color:var(--navy)}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.icon{width:48px;height:48px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.icon svg{width:26px;height:26px;stroke:var(--teal);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tags span{font-size:13px;font-weight:600;background:#E7F7F5;color:var(--teal-d);padding:4px 10px;border-radius:999px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;counter-reset:s}
+.step{position:relative;padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--teal);color:var(--navy);font-weight:800;font-size:18px;margin-bottom:14px}
+.step h3{margin:0 0 6px;font-size:18px;color:var(--navy)}
+.step p{margin:0;color:var(--muted);font-size:15.5px}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.about-card{background:var(--navy);color:#fff;border-radius:22px;padding:34px}
+.about-card h3{margin:16px 0 4px;font-size:24px}
+.about-card .cred{color:var(--teal);font-weight:700;margin:0 0 18px}
+.about-card ul{margin:0;padding-left:18px;color:#C9D5E2;font-size:15.5px}
+.about-card li{margin:6px 0}
+.profiles{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.profiles a{color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;text-decoration:none;font-size:14px;font-weight:600}
+.profiles a:hover{border-color:var(--teal);color:var(--teal)}
+.checks{list-style:none;padding:0;margin:22px 0 0}
+.checks li{padding-left:34px;position:relative;margin:12px 0}
+.checks li::before{content:"";position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--teal)}
+.checks li::after{content:"";position:absolute;left:7px;top:8px;width:8px;height:5px;border-left:2.5px solid var(--navy);border-bottom:2.5px solid var(--navy);transform:rotate(-45deg)}
+/* video */
+.videos{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.vid{border-radius:16px;overflow:hidden;background:var(--navy);border:1px solid var(--line)}
+.vid iframe{display:block;width:100%;border:0}
+.vid.wide iframe{aspect-ratio:16/9}
+.vid.short iframe{aspect-ratio:9/16}
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:0 0 12px}
+summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:17px}
+details p{margin:10px 0 0;color:var(--muted)}
+/* contact */
+.contact{background:linear-gradient(180deg,var(--navy),var(--navy2));color:#fff}
+.contact h2{color:#fff}
+.contact .sub{color:#C9D5E2}
+.cgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:44px;align-items:start}
+form{background:#fff;color:var(--ink);border-radius:20px;padding:30px;display:grid;gap:16px}
+label{font-weight:600;font-size:14px;display:grid;gap:6px;color:var(--navy)}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;width:100%;color:var(--ink);background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+textarea{min-height:130px;resize:vertical}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.small{font-size:13px;color:var(--muted)}
+.promise{list-style:none;padding:0;margin:0}
+.promise li{display:flex;gap:14px;margin:0 0 18px;color:#D5DEE8}
+.promise b{color:#fff;display:block}
+.dot{flex:0 0 12px;height:12px;border-radius:50%;background:var(--teal);margin-top:8px}
+footer{background:#0A1729;color:#8DA0B6;padding:30px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#C9D5E2}
+@media (max-width:900px){
+ .hero .wrap,.about,.cgrid{grid-template-columns:minmax(0,1fr)}
+ .hero-mark{order:-1}.hero-mark svg{width:180px}
+ .grid3{grid-template-columns:minmax(0,1fr)}
+ .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .videos{grid-template-columns:repeat(2,minmax(0,1fr))}.vid.wide{grid-column:1/-1}
+ .nav ul{display:none}
+}
+@media (max-width:560px){.steps,.row2{grid-template-columns:minmax(0,1fr)} section{padding:64px 0}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#top" aria-label="Review Consulting home">
+   <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="#163050" stroke="#40C4B4" stroke-width="8"/><polygon points="100,38 120,68 80,68" fill="#40C4B4"/><polygon points="77,74 123,74 141,101 59,101" fill="#F5F7FA"/><polygon points="55,107 145,107 164,135 36,135" fill="#F5F7FA" fill-opacity=".7"/></svg>
+   Review Consulting
+  </a>
+  <ul>
+   <li><a href="#services">Services</a></li>
+   <li><a href="#process">How it works</a></li>
+   <li><a href="#about">About</a></li>
+   <li><a href="#videos">Videos</a></li>
+   <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a class="btn" href="#contact">Free assessment</a>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap">
+  <div>
+   <span class="eyebrow">Evidence synthesis consulting</span>
+   <h1>Systematic, scoping &amp; literature reviews, <em>made clear.</em></h1>
+   <p class="lead">Methodological support from research question to publication, for postgraduate students, clinicians and researchers. Meta-analysis included.</p>
+   <div class="cta-row">
+    <a class="btn" href="#contact">Get a free assessment in 48 hours</a>
+    <a class="btn ghost" href="#services">See services</a>
+   </div>
+   <div class="trust">
+    <div><strong>JBI EBHC Center</strong>University of West Attica, Athens</div>
+    <div><strong>Journal peer reviewer</strong>International journals</div>
+    <div><strong>Confidential</strong>Your data and ideas stay yours</div>
+   </div>
+  </div>
+  <div class="hero-mark" aria-hidden="true">
+   <svg viewBox="0 0 200 200"><polygon points="100,20 126,59 74,59" fill="#40C4B4"/><polygon points="70,65 130,65 154,100 46,100" fill="#F5F7FA"/><polygon points="43,106 157,106 182,140 18,140" fill="#F5F7FA" fill-opacity=".7"/><polygon points="15,146 185,146 199,166 1,166" fill="#F5F7FA" fill-opacity=".4"/></svg>
+  </div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <h2>Services</h2>
+  <p class="sub">Support at the stage where you need it, or across the whole review. Every project starts with a free, confidential assessment.</p>
+  <div class="grid3">
+   <div class="card">
+    <div class="icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+    <h3>Systematic reviews</h3>
+    <p>Rigorous, reproducible reviews following JBI and Cochrane methods, reported with PRISMA 2020.</p>
+    <div class="tags"><span>PICO</span><span>PROSPERO</span><span>RoB 2</span><span>GRADE</span></div>
+   </div>
+   <div class="card">
+    <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></div>
+    <h3>Scoping reviews</h3>
+    <p>Map the evidence on broad or emerging topics, clarify concepts and identify gaps.</p>
+    <div class="tags"><span>PCC</span><span>JBI</span><span>OSF</span><span>PRISMA-ScR</span></div>
+   </div>
+   <div class="card">
+    <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2V5z"/><path d="M4 19a2 2 0 012-2h13"/></svg></div>
+    <h3>Literature reviews</h3>
+    <p>Well-structured narrative reviews and thesis background chapters with a transparent search.</p>
+    <div class="tags"><span>Narrative</span><span>Thesis</span><span>SANRA</span></div>
+   </div>
+   <div class="card">
+    <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 6h10M5 11h12M3 16h8"/><path d="M12 3v18"/><path d="M16 19l3-2-3-2-3 2z"/></svg></div>
+    <h3>Meta-analysis</h3>
+    <p>Pooled estimates, forest plots, heterogeneity, subgroup and sensitivity analyses, clearly interpreted.</p>
+    <div class="tags"><span>Forest plots</span><span>I&#178;</span><span>Random effects</span></div>
+   </div>
+   <div class="card">
+    <div class="icon"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
+    <h3>Protocols &amp; search strategies</h3>
+    <p>Research question, protocol writing and registration, database-specific search strategies.</p>
+    <div class="tags"><span>PRISMA-P</span><span>MeSH</span><span>PRISMA-S</span></div>
+   </div>
+   <div class="card">
+    <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+    <h3>Manuscripts &amp; peer review</h3>
+    <p>Manuscript preparation, journal selection and clear, point-by-point responses to reviewers.</p>
+    <div class="tags"><span>Submission</span><span>Revisions</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="process" class="alt">
+ <div class="wrap">
+  <h2>How it works</h2>
+  <p class="sub">Simple, transparent and confidential from the first message.</p>
+  <div class="steps">
+   <div class="step"><h3>Tell me about your project</h3><p>Send a short description through the form below.</p></div>
+   <div class="step"><h3>Free assessment in 48 hours</h3><p>You get honest feedback on your question, design and next steps.</p></div>
+   <div class="step"><h3>A clear plan and quote</h3><p>Agreed scope, timeline and cost before any work starts.</p></div>
+   <div class="step"><h3>Support to publication</h3><p>Hands-on methodological support until your review is complete.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap about">
+  <div class="about-card">
+   <svg viewBox="0 0 200 200" width="72" height="72" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="#0E2038" stroke="#40C4B4" stroke-width="8"/><polygon points="100,40 120,70 80,70" fill="#40C4B4"/><polygon points="77,76 123,76 141,103 59,103" fill="#F5F7FA"/><polygon points="55,109 145,109 164,137 36,137" fill="#F5F7FA" fill-opacity=".7"/></svg>
+   <h3>Dr. Stylianos Sergios Chatziioannou</h3>
+   <p class="cred">MD, MBA, 2MSc, PhD(c)</p>
+   <ul>
+    <li>Physician in Obstetrics &amp; Gynecology</li>
+    <li>JBI Evidence-Based Healthcare Center, University of West Attica, Athens</li>
+    <li>School of Medicine, European University of Cyprus</li>
+    <li>Peer reviewer for international journals</li>
+   </ul>
+   <div class="profiles">
+    <a href="https://orcid.org/0009-0008-6394-1891" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://scholar.google.com/citations?user=KsW4EogAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://www.researchgate.net/profile/Stylianos-Chatziioannou-2" target="_blank" rel="noopener">ResearchGate</a>
+    <a href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">YouTube</a>
+   </div>
+  </div>
+  <div>
+   <h2>Methodology from someone who reviews it</h2>
+   <p class="sub" style="margin-bottom:0">I work in evidence synthesis and review manuscripts for journals, so I know what editors and reviewers look for. My aim is a review you understand, can defend and can publish.</p>
+   <ul class="checks">
+    <li>Methods aligned with JBI, Cochrane and PRISMA guidance</li>
+    <li>Experience across medicine, nursing, psychology and public health topics</li>
+    <li>Clear explanations, so you stay in control of your own work</li>
+    <li>Ethical, transparent support that respects your institution's academic integrity rules</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="videos" class="alt">
+ <div class="wrap">
+  <h2>Free tutorials</h2>
+  <p class="sub">Short, practical videos on systematic, scoping and literature reviews. New videos every week on <a href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">YouTube</a>.</p>
+  <div class="videos">
+   <div class="vid wide"><iframe src="https://www.youtube-nocookie.com/embed/8c1vX3orbfc" title="Channel trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+   <div class="vid short"><iframe src="https://www.youtube-nocookie.com/embed/Kh1cdl0nTug" title="5 tips to find your research question" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+   <div class="vid short"><iframe src="https://www.youtube-nocookie.com/embed/uwagte4smHE" title="Literature review vs scoping review" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  </div>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="wrap" style="max-width:860px">
+  <h2>Frequently asked questions</h2>
+  <p class="sub">If your question isn't here, just ask in the form.</p>
+  <details><summary>Which type of review do I need?</summary><p>It depends on your question. A literature review explains a topic or builds an argument, a scoping review maps all the evidence on a topic, and a systematic review answers a focused question, often with a meta-analysis. The free assessment includes a recommendation.</p></details>
+  <details><summary>Is the first assessment really free?</summary><p>Yes. You receive confidential feedback within 48 hours, with no obligation to continue.</p></details>
+  <details><summary>Do you write the review for me?</summary><p>I provide methodological support, training and expert input so that the work remains yours and meets your institution's rules on academic integrity. The scope is agreed with you in advance.</p></details>
+  <details><summary>Is my project kept confidential?</summary><p>Yes. Your topic, data and drafts are never shared with anyone else.</p></details>
+  <details><summary>How much does it cost?</summary><p>It depends on the type of review and the stages you need help with. After the free assessment you receive a clear quote before any work begins.</p></details>
+  <details><summary>Can you help in Greek?</summary><p>Yes. Support is available in English and Greek.</p></details>
+ </div>
+</section>
+
+<section id="contact" class="contact">
+ <div class="wrap cgrid">
+  <div>
+   <h2>Get your free assessment</h2>
+   <p class="sub">Tell me briefly about your project. You'll receive a confidential reply within 48 hours.</p>
+   <ul class="promise">
+    <li><span class="dot"></span><span><b>Honest feedback</b>On your question, design and feasibility.</span></li>
+    <li><span class="dot"></span><span><b>No obligation</b>Decide afterwards whether you want support.</span></li>
+    <li><span class="dot"></span><span><b>Confidential</b>Your ideas stay yours.</span></li>
+   </ul>
+  </div>
+  <form action="https://formsubmit.co/steliosmed93@gmail.com" method="POST">
+   <input type="hidden" name="_subject" value="New project inquiry from your website">
+   <input type="hidden" name="_template" value="table">
+   <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <div class="row2">
+    <label>Name<input name="name" required autocomplete="name"></label>
+    <label>Email<input name="email" type="email" required autocomplete="email"></label>
+   </div>
+   <div class="row2">
+    <label>Type of review
+     <select name="review_type">
+      <option>Not sure yet</option><option>Systematic review</option><option>Systematic review with meta-analysis</option><option>Scoping review</option><option>Literature review</option><option>Other</option>
+     </select>
+    </label>
+    <label>Current stage
+     <select name="stage">
+      <option>Just an idea</option><option>Research question</option><option>Protocol</option><option>Search and screening</option><option>Analysis</option><option>Writing or revisions</option>
+     </select>
+    </label>
+   </div>
+   <label>Your project<textarea name="message" required placeholder="Topic, deadline, and where you need help"></textarea></label>
+   <button class="btn" type="submit">Send for free assessment</button>
+   <p class="small" style="margin:0">Your message goes directly to Dr. Chatziioannou and is treated confidentially.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>&copy; 2026 Review Consulting &middot; Dr. Stylianos Sergios Chatziioannou, MD, MBA, 2MSc, PhD(c)</span>
+  <span><a href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">YouTube</a> &middot; <a href="https://orcid.org/0009-0008-6394-1891" target="_blank" rel="noopener">ORCID</a> &middot; <a href="https://www.researchgate.net/profile/Stylianos-Chatziioannou-2" target="_blank" rel="noopener">ResearchGate</a></span>
+ </div>
+</footer>
+</body>
+</html>
