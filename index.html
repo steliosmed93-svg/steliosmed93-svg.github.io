@@ -282,7 +282,7 @@ footer a{color:#C9D5E2}
     <li><span class="dot"></span><span><b>No obligation</b>Decide afterwards whether you want support.</span></li>
     <li><span class="dot"></span><span><b>Confidential</b>Your ideas stay yours.</span></li>
    </ul>
-   <p style="margin:26px 0 0;color:#C9D5E2">Prefer email? Write directly to <a href="mailto:steliosmed93@gmail.com?subject=Free%20assessment%20request" style="color:#40C4B4;font-weight:700">steliosmed93@gmail.com</a></p>
+   <p style="margin:26px 0 0;color:#C9D5E2">Prefer email? Write directly to <a href="mailto:reviewconsultingsr@gmail.com?subject=Free%20assessment%20request" style="color:#40C4B4;font-weight:700">reviewconsultingsr@gmail.com</a></p>
   </div>
   <form id="assessForm" action="https://script.google.com/macros/s/AKfycbyxrVwz5IaDe86MJV2hNwRpDfHht1QGQ0Y2Cl-QSBdudZc4hfzRKke9Obh1rk_uKEKmQw/exec" method="POST">
    <input type="hidden" name="_subject" value="New project inquiry from your website">
@@ -328,12 +328,12 @@ footer a{color:#C9D5E2}
   var d=new FormData(f), b=f.querySelector('button[type=submit]');
   b.disabled=true; b.textContent='Sending...'; st.style.color='#1F8F82'; st.textContent='';
   var body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nType of review: '+d.get('review_type')+'\nStage: '+d.get('stage')+'\n\n'+d.get('message');
-  var mailto='mailto:steliosmed93@gmail.com?subject='+encodeURIComponent('Free assessment request from '+d.get('name'))+'&body='+encodeURIComponent(body);
+  var mailto='mailto:reviewconsultingsr@gmail.com?subject='+encodeURIComponent('Free assessment request from '+d.get('name'))+'&body='+encodeURIComponent(body);
   var ctrl=new AbortController(); var t=setTimeout(function(){ctrl.abort();},15000);
   fetch('https://script.google.com/macros/s/AKfycbyxrVwz5IaDe86MJV2hNwRpDfHht1QGQ0Y2Cl-QSBdudZc4hfzRKke9Obh1rk_uKEKmQw/exec',{method:'POST',mode:'no-cors',body:new URLSearchParams(d),signal:ctrl.signal})
    .then(function(){clearTimeout(t);})
    .then(function(){ f.reset(); st.textContent='Thank you! Your request was sent. You will receive a reply within 48 hours.'; })
-   .catch(function(){ st.style.color='#14213A'; st.innerHTML='Your email app is opening with your message ready to send. If nothing opens, please email <a href="'+mailto+'">steliosmed93@gmail.com</a>.'; window.location.href=mailto; })
+   .catch(function(){ st.style.color='#14213A'; st.innerHTML='Your email app is opening with your message ready to send. If nothing opens, please email <a href="'+mailto+'">reviewconsultingsr@gmail.com</a>.'; window.location.href=mailto; })
    .finally(function(){ b.disabled=false; b.textContent='Send for free assessment'; });
  });
 })();
