@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Systematic Review Starter Kit | Review Consulting</title>
+<meta name="description" content="Free Systematic Review Starter Kit: review type guide, PICO/PCC/PEO worksheets, FINER test, search strategy template, risk of bias tool picker and PRISMA 2020 pre-submission checklist.">
+<meta name="robots" content="noindex">
+<style>
+:root{--navy:#0E2038;--teal:#40C4B4;--teal-d:#0E7C6F;--yel:#FFD666;--ink:#1D2A3D;--muted:#5B6B82;--line:#C9D3E0;--light:#EEF3F8}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#E9EEF4;font-size:15px;line-height:1.55}
+.bar{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap}
+.bar a{color:var(--teal);font-weight:700;text-decoration:none}
+.bar button{background:var(--teal);color:var(--navy);border:0;border-radius:999px;padding:9px 18px;font-weight:800;font-size:14px;cursor:pointer;font-family:inherit}
+.page{max-width:820px;margin:22px auto;background:#fff;padding:46px 54px;border-radius:6px;box-shadow:0 6px 24px rgba(14,32,56,.12)}
+.cover{background:var(--navy);color:#fff;text-align:center;padding:70px 40px}
+.cover .kick{color:var(--teal);font-weight:800;letter-spacing:.14em;font-size:13px}
+.cover h1{font-size:44px;line-height:1.1;margin:14px 0 6px}
+.cover h1 span{color:var(--yel)}
+.cover p{color:#D5DEEA;font-size:17px}
+.cover .who{margin-top:34px;font-weight:700}
+.cover .cred{color:#D5DEEA;font-size:13px}
+.cover .url{display:inline-block;margin-top:22px;background:var(--teal);color:var(--navy);font-weight:800;padding:10px 26px;border-radius:999px;text-decoration:none}
+.pyr{width:120px;height:auto;margin:0 auto 8px;display:block}
+.kick{color:var(--teal-d);font-weight:800;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
+h2{font-size:27px;color:var(--navy);margin:4px 0 8px;line-height:1.2}
+h3{font-size:17px;color:var(--navy);margin:20px 0 8px}
+table{width:100%;border-collapse:collapse;margin:8px 0 6px;font-size:14px}
+th,td{border:1px solid var(--line);padding:7px 9px;vertical-align:top;text-align:left}
+th{background:#DDF4F1;color:var(--navy)}
+tr:nth-child(even) td{background:var(--light)}
+td.box{width:30px;text-align:center;font-size:17px;background:#fff!important}
+td.lab{width:34%;background:var(--light)!important;font-weight:700}
+td.fill{height:46px;color:#8A97A8;font-size:12.5px}
+td.tall{height:90px}
+.tip{background:#FFF6D6;border:1px solid var(--yel);padding:10px 14px;border-radius:6px;margin:14px 0;font-size:14px}
+.cta{background:#DDF4F1;border:2px solid var(--teal);border-radius:10px;padding:22px 26px}
+.cta a{color:var(--teal-d);font-weight:800;font-size:18px}
+.refs p{padding-left:22px;text-indent:-22px;font-size:13px;margin:0 0 8px}
+.foot{color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:26px;padding-top:8px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.foot a{color:var(--muted)}
+.ex{color:var(--muted);font-size:12.5px}
+@media(max-width:700px){.page{padding:26px 18px;margin:10px}.cover h1{font-size:32px}}
+@media print{
+ body{background:#fff;font-size:11.5pt}
+ .bar{display:none}
+ .page{box-shadow:none;margin:0;max-width:none;border-radius:0;padding:0 4mm;page-break-after:always}
+ .page:last-child{page-break-after:auto}
+ .cover{-webkit-print-color-adjust:exact;print-color-adjust:exact;min-height:265mm;display:flex;flex-direction:column;justify-content:center}
+ th,tr:nth-child(even) td,.tip,.cta,td.lab{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ @page{size:A4;margin:14mm}
+}
+</style>
+</head>
+<body>
+<div class="bar"><span><b>REVIEW CONSULTING</b> · Systematic Review Starter Kit</span><span><button onclick="window.print()">Save as PDF / Print</button> &nbsp; <a href="https://reviewconsulting.eu">https://reviewconsulting.eu</a></span></div>
+
+<section class="page cover">
+ <svg class="pyr" viewBox="0 0 120 100" aria-hidden="true"><polygon points="60,4 72,26 48,26" fill="#40C4B4"/><polygon points="46,30 74,30 86,52 34,52" fill="#fff"/><polygon points="32,56 88,56 100,78 20,78" fill="#C9D6E6"/><polygon points="18,82 102,82 112,98 8,98" fill="#8EA1BA"/></svg>
+ <div class="kick">REVIEW CONSULTING</div>
+ <h1>Systematic Review<br><span>Starter Kit</span></h1>
+ <p>From a vague idea to a review you can submit:<br>worksheets, templates and checklists in 6 steps.</p>
+ <div class="who">Dr. Stylianos Sergios Chatziioannou</div>
+ <div class="cred">MD, MBA, 2MSc, PhD(c) · Clinician-researcher and journal peer reviewer</div>
+ <a class="url" href="https://reviewconsulting.eu">https://reviewconsulting.eu</a>
+</section>
+
+<section class="page">
+ <div class="kick">How to use this kit</div>
+ <h2>Six steps from idea to submission</h2>
+ <p>Print it, save it as a PDF, or fill it in on paper. Work through the steps in order: most reviews that get rejected went wrong at Step 1 or 2, long before the statistics. Each step ends with a short checklist, so you always know whether you are ready to move on.</p>
+ <table><tr><th>Step</th><th>What you decide</th></tr>
+ <tr><td>1</td><td>Which type of review fits your question</td></tr>
+ <tr><td>2</td><td>Your research question (PICO, PCC or PEO)</td></tr>
+ <tr><td>3</td><td>Whether the question is worth answering (FINER test)</td></tr>
+ <tr><td>4</td><td>Your search strategy and databases</td></tr>
+ <tr><td>5</td><td>Protocol, registration, screening and risk of bias</td></tr>
+ <tr><td>6</td><td>Reporting: the PRISMA 2020 pre-submission check</td></tr></table>
+ <div class="tip"><b>Pyro's tip.</b> Keep a simple log from day one: date, database, exact search string and number of hits. You will need these numbers for your PRISMA flow diagram, and rebuilding them at the end is painful.</div>
+</section>
+
+<section class="page">
+ <div class="kick">Step 1</div>
+ <h2>Choose the right type of review</h2>
+ <p>Choose by your question, not by what sounds impressive. A scoping review is not a "lighter" systematic review: it answers a different kind of question (Peters et al., 2020).</p>
+ <table><tr><th>Type</th><th>Answers questions like…</th><th>Typical features</th></tr>
+ <tr><td><b>Systematic review</b></td><td>Does intervention X work for outcome Y? What is the prevalence of Z?</td><td>Focused PICO question, registered protocol, full search, 2 independent reviewers, risk of bias assessment, PRISMA 2020 reporting.</td></tr>
+ <tr><td><b>Meta-analysis</b></td><td>How big is the effect when we combine all similar studies?</td><td>A statistical step inside a systematic review. Needs studies that are similar enough to pool.</td></tr>
+ <tr><td><b>Scoping review</b></td><td>What evidence exists on a topic? Where are the gaps?</td><td>Broad PCC question, maps the evidence, usually no pooled effect, PRISMA-ScR reporting (Tricco et al., 2018).</td></tr>
+ <tr><td><b>Literature (narrative) review</b></td><td>What is the story so far? What do key studies argue?</td><td>Selected studies, flexible search, expert interpretation, no protocol required.</td></tr></table>
+ <h3>Quick decision</h3>
+ <table>
+ <tr><td class="box">☐</td><td>My question asks whether something <b>works</b> or how big an effect is: systematic review (with or without meta-analysis).</td></tr>
+ <tr><td class="box">☐</td><td>My question asks <b>what exists</b> or how a topic has been studied: scoping review.</td></tr>
+ <tr><td class="box">☐</td><td>I want to <b>explain or argue</b> a position using key studies: literature review.</td></tr>
+ <tr><td class="box">☐</td><td>I have checked with my supervisor or target journal which type they expect.</td></tr></table>
+</section>
+
+<section class="page">
+ <div class="kick">Step 2</div>
+ <h2>Build your research question</h2>
+ <p>A good question names every element, so that a colleague could search for it without asking you anything. Fill in the framework that fits your review type.</p>
+ <h3>PICO: for systematic reviews of interventions</h3>
+ <table>
+ <tr><td class="lab">P · Population</td><td class="fill">Who? e.g. women with gestational diabetes</td></tr>
+ <tr><td class="lab">I · Intervention</td><td class="fill">What is tested? e.g. walking after meals</td></tr>
+ <tr><td class="lab">C · Comparison</td><td class="fill">Against what? e.g. usual care</td></tr>
+ <tr><td class="lab">O · Outcome</td><td class="fill">What changes? e.g. post-meal glucose, need for insulin</td></tr></table>
+ <h3>PCC: for scoping reviews</h3>
+ <table>
+ <tr><td class="lab">P · Population</td><td class="fill">e.g. university students</td></tr>
+ <tr><td class="lab">C · Concept</td><td class="fill">What you want to map, e.g. fertility awareness</td></tr>
+ <tr><td class="lab">C · Context</td><td class="fill">Setting or place, e.g. Europe</td></tr></table>
+ <h3>PEO: for risk factors and associations</h3>
+ <table>
+ <tr><td class="lab">P · Population</td><td class="fill">e.g. adults</td></tr>
+ <tr><td class="lab">E · Exposure</td><td class="fill">e.g. night-shift work</td></tr>
+ <tr><td class="lab">O · Outcome</td><td class="fill">e.g. type 2 diabetes</td></tr></table>
+ <table><tr><td class="lab">My question in ONE sentence</td><td class="fill tall">Ends with a question mark. One population, one intervention or exposure, one or two main outcomes.</td></tr></table>
+</section>
+
+<section class="page">
+ <div class="kick">Step 3</div>
+ <h2>Is it worth answering? The FINER test</h2>
+ <p>Before investing months, run your question through the FINER criteria (Hulley et al., 2013). If any answer is "no", refine the question now.</p>
+ <table><tr><th></th><th>Criterion</th><th>Ask yourself</th></tr>
+ <tr><td class="box">☐</td><td><b>F</b>easible</td><td>Do enough primary studies exist? Do I have the time, team and database access?</td></tr>
+ <tr><td class="box">☐</td><td><b>I</b>nteresting</td><td>Does it interest me and my field? Will I still care in 6 to 12 months?</td></tr>
+ <tr><td class="box">☐</td><td><b>N</b>ovel</td><td>Is there no recent or ongoing review on exactly this? (Check PROSPERO, OSF, Cochrane, PubMed.)</td></tr>
+ <tr><td class="box">☐</td><td><b>E</b>thical</td><td>Does it respect patients and data? (Reviews of published data rarely need ethics approval: check locally.)</td></tr>
+ <tr><td class="box">☐</td><td><b>R</b>elevant</td><td>Would the answer change practice, policy or future research?</td></tr></table>
+ <h3>Has it already been done?</h3>
+ <table>
+ <tr><td class="box">☐</td><td>Searched PROSPERO for registered reviews on my topic.</td></tr>
+ <tr><td class="box">☐</td><td>Searched OSF Registries.</td></tr>
+ <tr><td class="box">☐</td><td>Searched the Cochrane Library and PubMed with "systematic review" or "meta-analysis" filters.</td></tr>
+ <tr><td class="box">☐</td><td>If a similar review exists: I have a new angle (population, setting, outcome, newer studies, different design).</td></tr></table>
+ <div class="tip"><b>Pyro's tip.</b> A review published 5 or more years ago, with many new trials since, is a perfectly good reason for an update. Say so clearly in your introduction.</div>
+</section>
+
+<section class="page">
+ <div class="kick">Step 4</div>
+ <h2>Plan your search strategy</h2>
+ <p>Turn each element of your question into a concept. Within a concept, combine synonyms with <b>OR</b>. Between concepts, combine with <b>AND</b>. Use both subject headings (such as MeSH) and free-text words.</p>
+ <table><tr><th></th><th>Concept 1 (Population)</th><th>Concept 2 (Intervention / Exposure)</th><th>Concept 3 (Outcome, optional)</th></tr>
+ <tr><td class="lab">Subject headings (MeSH / Emtree)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+ <tr><td class="lab">Free-text synonyms</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+ <tr><td class="lab">Spelling variants and truncation (e.g. random*)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr></table>
+ <p class="ex">Example: ("Diabetes, Gestational"[MeSH] OR "gestational diabetes") AND (walking OR "physical activity" OR exercise) AND (postprandial OR glucose)</p>
+ <h3>Databases</h3>
+ <table>
+ <tr><td class="box">☐</td><td>PubMed / MEDLINE</td></tr><tr><td class="box">☐</td><td>Embase</td></tr>
+ <tr><td class="box">☐</td><td>Cochrane Library (CENTRAL)</td></tr><tr><td class="box">☐</td><td>CINAHL or PsycINFO (if relevant to your field)</td></tr>
+ <tr><td class="box">☐</td><td>Trial registries: ClinicalTrials.gov, WHO ICTRP</td></tr><tr><td class="box">☐</td><td>Grey literature and reference lists of included studies</td></tr></table>
+ <h3>Search log</h3>
+ <table><tr><th>Date</th><th>Database</th><th>Search string version</th><th>Hits</th></tr>
+ <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+ <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+ <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr></table>
+ <div class="tip"><b>Pyro's tip.</b> Search at least two or three databases. Searching only one is one of the most common reasons reviewers question a systematic review.</div>
+</section>
+
+<section class="page">
+ <div class="kick">Step 5</div>
+ <h2>Protocol, screening and risk of bias</h2>
+ <h3>Protocol and registration</h3>
+ <table>
+ <tr><td class="box">☐</td><td>Protocol written before screening starts (question, eligibility criteria, search, methods).</td></tr>
+ <tr><td class="box">☐</td><td>Registered on PROSPERO (systematic reviews with a health outcome) or OSF (scoping and other reviews).</td></tr>
+ <tr><td class="box">☐</td><td>Registration number noted for the methods section.</td></tr></table>
+ <h3>Screening</h3>
+ <table>
+ <tr><td class="box">☐</td><td>Two reviewers screen titles and abstracts independently.</td></tr>
+ <tr><td class="box">☐</td><td>Two reviewers assess full texts independently.</td></tr>
+ <tr><td class="box">☐</td><td>Disagreements resolved by discussion or a third reviewer.</td></tr>
+ <tr><td class="box">☐</td><td>Reasons for every full-text exclusion recorded.</td></tr>
+ <tr><td class="box">☐</td><td>A screening tool chosen (for example Rayyan or Covidence) and a pilot round done on 20 to 50 records.</td></tr></table>
+ <h3>Pick a risk of bias tool</h3>
+ <table><tr><th>Study design</th><th>Common tool</th></tr>
+ <tr><td>Randomised controlled trials</td><td>RoB 2 (Sterne et al., 2019)</td></tr>
+ <tr><td>Non-randomised studies of interventions</td><td>ROBINS-I (Sterne et al., 2016)</td></tr>
+ <tr><td>Cohort, case-control, cross-sectional and other designs</td><td>JBI critical appraisal checklists, or another validated design-specific tool</td></tr>
+ <tr><td>Scoping reviews</td><td>Critical appraisal is optional and usually not done (Peters et al., 2020)</td></tr></table>
+ <div class="tip"><b>Pyro's tip.</b> Do not delete high-risk studies to make the result look cleaner. Keep them, and run a sensitivity analysis without them. If the answer changes, your conclusion is less certain.</div>
+</section>
+
+<section class="page">
+ <div class="kick">Step 6</div>
+ <h2>Before you submit: PRISMA 2020 check</h2>
+ <p>This is a short pre-submission check based on the PRISMA 2020 statement (Page et al., 2021). Always complete the full official checklist and submit it with your manuscript; for scoping reviews use PRISMA-ScR (Tricco et al., 2018).</p>
+ <table>
+ <tr><td class="box">☐</td><td><b>Title</b> identifies the report as a systematic review (and meta-analysis, if done).</td></tr>
+ <tr><td class="box">☐</td><td><b>Abstract</b> follows the PRISMA 2020 for Abstracts structure.</td></tr>
+ <tr><td class="box">☐</td><td><b>Introduction</b> states the rationale and an explicit objective or question.</td></tr>
+ <tr><td class="box">☐</td><td><b>Eligibility criteria</b> and how studies were grouped are clearly reported.</td></tr>
+ <tr><td class="box">☐</td><td><b>Information sources</b> listed with the date each was last searched.</td></tr>
+ <tr><td class="box">☐</td><td><b>Full search strategy</b> for at least one database is provided (usually as a supplement).</td></tr>
+ <tr><td class="box">☐</td><td><b>Selection and data collection</b> methods: number of reviewers, independence, tools.</td></tr>
+ <tr><td class="box">☐</td><td><b>Risk of bias</b> methods and tool named; results reported per study.</td></tr>
+ <tr><td class="box">☐</td><td><b>Synthesis methods</b> described (effect measures, model, heterogeneity, sensitivity analyses).</td></tr>
+ <tr><td class="box">☐</td><td><b>PRISMA flow diagram</b> with numbers at every stage and reasons for full-text exclusions.</td></tr>
+ <tr><td class="box">☐</td><td><b>Certainty of evidence</b> assessed (for example with GRADE), if appropriate.</td></tr>
+ <tr><td class="box">☐</td><td><b>Discussion</b> covers limitations of the evidence and of the review process.</td></tr>
+ <tr><td class="box">☐</td><td><b>Registration</b> number, protocol access, funding and competing interests reported.</td></tr>
+ <tr><td class="box">☐</td><td><b>Data and code availability</b> statement included.</td></tr></table>
+ <h3>The 5 mistakes that cause most rejections</h3>
+ <table><tr><th>Mistake</th><th>Fix</th></tr>
+ <tr><td>No registered protocol</td><td>Register before screening; report the number.</td></tr>
+ <tr><td>Only one database searched</td><td>Use at least 2 to 3, plus registries.</td></tr>
+ <tr><td>One person screened everything</td><td>Two independent reviewers at both stages.</td></tr>
+ <tr><td>Vague outcomes ("effectiveness")</td><td>Name the exact outcome and how it was measured.</td></tr>
+ <tr><td>Pooling studies that are too different</td><td>Check clinical and statistical heterogeneity first; use narrative synthesis if needed.</td></tr></table>
+</section>
+
+<section class="page">
+ <div class="kick">Next step</div>
+ <h2>Need a hand?</h2>
+ <div class="cta">
+  <h3 style="margin-top:0">Stuck on your review?</h3>
+  <p>Get a <b>free, confidential project assessment within 48 hours</b>. Systematic, scoping and literature reviews, meta-analysis, protocols, statistics and manuscripts, from the question to the response to reviewers.</p>
+  <p><a href="https://reviewconsulting.eu">https://reviewconsulting.eu</a></p>
+  <p class="ex">Email: reviewconsultingsr@gmail.com · YouTube: @ReviewConsultingSR</p>
+ </div>
+ <h3>References</h3>
+ <div class="refs">
+  <p>Higgins, J. P. T., Thomas, J., Chandler, J., Cumpston, M., Li, T., Page, M. J., &amp; Welch, V. A. (Eds.). (2024). <i>Cochrane handbook for systematic reviews of interventions</i> (Version 6.5). Cochrane. https://www.training.cochrane.org/handbook</p>
+  <p>Hulley, S. B., Cummings, S. R., Browner, W. S., Grady, D. G., &amp; Newman, T. B. (2013). <i>Designing clinical research</i> (4th ed.). Lippincott Williams &amp; Wilkins.</p>
+  <p>Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A., Brennan, S. E., Chou, R., Glanville, J., Grimshaw, J. M., Hróbjartsson, A., Lalu, M. M., Li, T., Loder, E. W., Mayo-Wilson, E., McDonald, S., … Moher, D. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. <i>BMJ, 372</i>, n71. https://doi.org/10.1136/bmj.n71</p>
+  <p>Peters, M. D. J., Marnie, C., Tricco, A. C., Pollock, D., Munn, Z., Alexander, L., McInerney, P., Godfrey, C. M., &amp; Khalil, H. (2020). Updated methodological guidance for the conduct of scoping reviews. <i>JBI Evidence Synthesis, 18</i>(10), 2119–2126. https://doi.org/10.11124/JBIES-20-00167</p>
+  <p>Sterne, J. A. C., Hernán, M. A., Reeves, B. C., Savović, J., Berkman, N. D., Viswanathan, M., Henry, D., Altman, D. G., Ansari, M. T., Boutron, I., Carpenter, J. R., Chan, A.-W., Churchill, R., Deeks, J. J., Hróbjartsson, A., Kirkham, J., Jüni, P., Loke, Y. K., Pigott, T. D., … Higgins, J. P. T. (2016). ROBINS-I: A tool for assessing risk of bias in non-randomised studies of interventions. <i>BMJ, 355</i>, i4919. https://doi.org/10.1136/bmj.i4919</p>
+  <p>Sterne, J. A. C., Savović, J., Page, M. J., Elbers, R. G., Blencowe, N. S., Boutron, I., Cates, C. J., Cheng, H.-Y., Corbett, M. S., Eldridge, S. M., Emberson, J. R., Hernán, M. A., Hopewell, S., Hróbjartsson, A., Junqueira, D. R., Jüni, P., Kirkham, J. J., Lasserson, T., Li, T., … Higgins, J. P. T. (2019). RoB 2: A revised tool for assessing risk of bias in randomised trials. <i>BMJ, 366</i>, l4898. https://doi.org/10.1136/bmj.l4898</p>
+  <p>Tricco, A. C., Lillie, E., Zarin, W., O'Brien, K. K., Colquhoun, H., Levac, D., Moher, D., Peters, M. D. J., Horsley, T., Weeks, L., Hempel, S., Akl, E. A., Chang, C., McGowan, J., Stewart, L., Hartling, L., Aldcroft, A., Wilson, M. G., Garritty, C., … Straus, S. E. (2018). PRISMA extension for scoping reviews (PRISMA-ScR): Checklist and explanation. <i>Annals of Internal Medicine, 169</i>(7), 467–473. https://doi.org/10.7326/M18-0850</p>
+ </div>
+ <div class="foot"><span>© 2026 Review Consulting. Free to use for your own research and teaching. Please do not resell.</span><a href="https://reviewconsulting.eu">https://reviewconsulting.eu</a></div>
+</section>
+</body>
+</html>
