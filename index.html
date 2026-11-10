@@ -180,6 +180,28 @@ footer a{color:#C9D5E2}
  .m-cta{display:block;position:fixed;left:16px;right:16px;bottom:14px;z-index:20;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .25s,opacity .25s}
  .m-cta.hide{transform:translateY(140%);opacity:0;pointer-events:none}
 }
+
+/* desktop compaction */
+@media (min-width:901px){
+ section{padding:60px 0}
+ .sub{margin-bottom:28px}
+ .subhead{margin:34px 0 16px}
+ #services .card{padding:22px 24px}
+ #services .card h3{margin:10px 0 6px}
+ #services .more-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+ #services .more-grid .card{padding:18px 20px;grid-column:auto!important}
+ #services .more-grid .card p{font-size:15px}
+ #services .more-grid .card .icon{display:none}
+ #services .more-grid .card h3{margin-top:0}
+ .cmp-toggle{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 22px;font:inherit;font-weight:700;font-size:15px;color:var(--navy);cursor:pointer}
+ .cmp-toggle:hover{border-color:var(--teal)}
+ .cmp-toggle::after{content:"\25BE";color:var(--teal-d);transition:transform .2s}
+ .cmp-toggle[aria-expanded="true"]::after{transform:rotate(180deg)}
+ #compare .sub{margin-bottom:18px}
+ #compare .tbl{display:none;margin-top:18px}
+ #compare.open .tbl{display:block}
+ .videos{grid-template-columns:minmax(0,2.4fr) minmax(0,1fr) minmax(0,1fr)}
+}
 </style>
 </head>
 <body>
