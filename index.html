@@ -202,6 +202,20 @@ footer a{color:#C9D5E2}
  #compare.open .tbl{display:block}
  .videos{grid-template-columns:minmax(0,2.4fr) minmax(0,1fr) minmax(0,1fr)}
 }
+
+/* top videos (auto from videos.json) */
+.videos.vgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;align-items:start}
+.vt{position:relative;display:block;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--navy);text-decoration:none;color:#fff;border:1px solid var(--line)}
+.vt img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.vt:hover img{transform:scale(1.04)}
+.vt::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 42%,rgba(8,20,38,.94))}
+.vt-rank{position:absolute;top:8px;left:8px;z-index:1;background:var(--teal);color:#0E2038;font-weight:800;font-size:12px;padding:3px 9px;border-radius:999px}
+.vt-info{position:absolute;left:10px;right:10px;bottom:10px;z-index:1;font-size:13px;line-height:1.3}
+.vt-info b{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-weight:700}
+.vt-info small{display:flex;align-items:center;gap:5px;margin-top:5px;color:#9FE3DA;font-weight:700;font-size:12px}
+.vt-info svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2}
+@media (min-width:901px) and (max-width:1100px){.videos.vgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:900px){.videos.vgrid{display:flex}.videos.vgrid .vt{flex:0 0 40%;scroll-snap-align:start}}
 </style>
 </head>
 <body>
@@ -624,6 +638,23 @@ document.querySelectorAll('.more').forEach(function(b){b.addEventListener('click
  if(m&&'IntersectionObserver' in window){var hv=true,cv=false;function u(){m.classList.toggle('hide',hv||cv);}
   new IntersectionObserver(function(e){hv=e[0].isIntersecting;u();}).observe(hero);
   new IntersectionObserver(function(e){cv=e[0].isIntersecting;u();}).observe(ct);}
+})();
+</script>
+<script>
+(function(){
+ var box=document.querySelector('#videos .videos'); if(!box||!window.fetch) return;
+ var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+ fetch('videos.json?'+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+  if(!d||!d.videos||!d.videos.length) return;
+  var top=d.videos.slice(0,6), eye='<svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+  box.innerHTML=top.map(function(v,i){
+   var url=v.short?'https://www.youtube.com/shorts/'+v.id:'https://www.youtube.com/watch?v='+v.id;
+   var img='https://i.ytimg.com/vi/'+v.id+'/'+(v.short?'oardefault.jpg':'maxresdefault.jpg');
+   var title=String(v.title||'').replace(/\s*#\w+/g,'').trim();
+   return '<a class="vt" href="'+url+'" target="_blank" rel="noopener" title="'+esc(title)+'"><img loading="lazy" src="'+img+'" onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg\'" alt="'+esc(title)+'"><span class="vt-rank">#'+(i+1)+'</span><span class="vt-info"><b>'+esc(title)+'</b><small>'+eye+(v.views||0).toLocaleString()+'</small></span></a>';
+  }).join('');
+  box.classList.add('vgrid');
+ }).catch(function(){});
 })();
 </script>
 </body>
