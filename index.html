@@ -111,10 +111,18 @@ footer a{color:#C9D5E2}
  .grid3{grid-template-columns:minmax(0,1fr)}
  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
  .videos{grid-template-columns:repeat(2,minmax(0,1fr))}.vid.wide{grid-column:1/-1}
- .nav ul{display:none}
+ .menu-btn{display:flex;order:1}
+ .nav .brand{order:0}
+ .nav-r{order:2}
+ .nav ul{display:none;order:3;flex-basis:100%;flex-direction:column;gap:0;padding:4px 0 14px;border-top:1px solid rgba(255,255,255,.12)}
+ .nav ul.open{display:flex}
+ .nav ul li a{display:block;padding:13px 4px;font-size:17px;border-bottom:1px solid rgba(255,255,255,.08)}
 }
 @media (max-width:560px){.steps,.row2{grid-template-columns:minmax(0,1fr)} section{padding:64px 0}}
-.nav-r{display:flex;align-items:center;gap:12px}.lang{display:flex;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:3px;gap:2px}.lang button{background:none;border:0;color:#D5DEE8;font-family:inherit;font-weight:700;font-size:13px;letter-spacing:.04em;padding:7px 11px;border-radius:999px;cursor:pointer;line-height:1}.lang button:hover{color:#fff}.lang button.on{background:var(--teal);color:#0E2038}
+.nav-r{display:flex;align-items:center;gap:12px}
+.menu-btn{display:none;width:46px;height:46px;border-radius:12px;border:1px solid rgba(255,255,255,.28);background:none;cursor:pointer;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.menu-btn span{display:block;width:22px;height:2.5px;border-radius:2px;background:#fff;transition:transform .2s,opacity .2s}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}.lang{display:flex;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:3px;gap:2px}.lang button{background:none;border:0;color:#D5DEE8;font-family:inherit;font-weight:700;font-size:13px;letter-spacing:.04em;padding:7px 11px;border-radius:999px;cursor:pointer;line-height:1}.lang button:hover{color:#fff}.lang button.on{background:var(--teal);color:#0E2038}
 .more{margin-top:16px;background:none;border:0;padding:0;color:var(--teal-d);font:inherit;font-weight:700;font-size:15px;cursor:pointer}.more:hover{text-decoration:underline}.card{display:flex;flex-direction:column}.card .more{margin-top:auto;padding-top:16px;align-self:flex-start}.card .tags{margin-bottom:4px}
 .subhead{margin:56px 0 20px;font-size:24px;color:var(--navy)}
 .tbl{overflow-x:auto;border-radius:18px;border:1px solid var(--line);background:#fff}.cmp{width:100%;border-collapse:collapse;min-width:720px;font-size:15px}.cmp th,.cmp td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.cmp thead th{background:var(--navy);color:#fff;font-size:16px}.cmp tbody th{color:var(--navy);width:18%}.cmp td{color:var(--muted)}.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
@@ -152,7 +160,8 @@ footer a{color:#C9D5E2}
    <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="#163050" stroke="#40C4B4" stroke-width="8"/><polygon points="100,38 120,68 80,68" fill="#40C4B4"/><polygon points="77,74 123,74 141,101 59,101" fill="#F5F7FA"/><polygon points="55,107 145,107 164,135 36,135" fill="#F5F7FA" fill-opacity=".7"/></svg>
    Review Consulting
   </a>
-  <ul>
+  <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+  <ul id="navlinks">
    <li><a href="#services">Services</a></li>
    <li><a href="#process">How it works</a></li>
    <li><a href="#about">About</a></li>
@@ -540,6 +549,13 @@ document.querySelectorAll('.more').forEach(function(b){b.addEventListener('click
   var ctrl=new AbortController(); setTimeout(function(){ctrl.abort();},12000);
   fetch('https://script.google.com/macros/s/AKfycbwTPPy3EmPT0bE3Cc7efUi2Nzh9yl2mxcg_EvCCsn5X8-7gh6nbkYyXF2KoEqkT9cbF/exec',{method:'POST',mode:'no-cors',body:new URLSearchParams(d),signal:ctrl.signal}).then(done,done);
  });
+})();
+</script>
+<script>
+(function(){
+ var b=document.querySelector('.menu-btn'), u=document.getElementById('navlinks'); if(!b||!u) return;
+ b.addEventListener('click',function(){var o=u.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+ u.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){u.classList.remove('open');b.setAttribute('aria-expanded','false');});});
 })();
 </script>
 </body>
