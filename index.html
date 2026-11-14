@@ -653,7 +653,7 @@ document.querySelectorAll('.more').forEach(function(b){b.addEventListener('click
   var em=String(d.get('email')||'').replace(/[<>&"]/g,''); var done=function(){ st.innerHTML=T('Thank you! The Starter Kit is on its way to')+' <b>'+em+'</b>. '+T('Check your inbox (and your spam folder) in a minute or two.'); b.style.display='none'; f.querySelectorAll('input').forEach(function(i){i.disabled=true;}); };
   var ctrl=new AbortController(); setTimeout(function(){ctrl.abort();},12000);
   fetch('https://script.google.com/macros/s/AKfycbwTPPy3EmPT0bE3Cc7efUi2Nzh9yl2mxcg_EvCCsn5X8-7gh6nbkYyXF2KoEqkT9cbF/exec',{method:'POST',mode:'no-cors',body:new URLSearchParams(d),signal:ctrl.signal}).then(done,done);
-  try{var bv=new URLSearchParams();bv.set('EMAIL',em);bv.set('email_address_check','');bv.set('locale','en');bv.set('html_type','simple');fetch('https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXouuHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==',{method:'POST',mode:'no-cors',body:bv});}catch(x){}
+  try{var bv=new URLSearchParams();bv.set('EMAIL',em);bv.set('email_address_check','');bv.set('locale','en');bv.set('html_type','simple');fetch('https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXoouHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==',{method:'POST',mode:'no-cors',body:bv});}catch(x){}
  });
 })();
 </script>
