@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is Your Systematic Review Ready? Free 2-Minute Quiz | Review Consulting</title>
+<meta name="description" content="Free 2-minute quiz: check whether your systematic review, meta-analysis, manuscript or thesis is ready for submission. Get your score and a personal list of what to fix.">
+<meta property="og:title" content="Is your systematic review ready? Take the 2-minute quiz">
+<meta property="og:description" content="10 questions, an instant score and a personal list of what to fix before you submit.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230E2038'/%3E%3Ctext x='50' y='66' font-size='46' text-anchor='middle' fill='%2340C4B4' font-family='Arial' font-weight='bold'%3ERC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E2038;--navy2:#163050;--teal:#40C4B4;--teal-d:#0E7C6F;--yel:#FFD666;--ink:#1D2A3D;--muted:#5B6B82;--line:#C9D3E0;--light:#EEF3F8;--red:#E25B5B}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--light);font-size:16px;line-height:1.55}
+a{color:var(--teal-d)}
+.bar{background:var(--navy);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.bar a.brand{color:#fff;font-weight:800;text-decoration:none;font-size:17px}
+.bar a.brand span{color:var(--teal)}
+.bar a.home{color:var(--teal);font-weight:700;text-decoration:none;font-size:14px}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;text-align:center;padding:46px 20px 70px}
+.hero .kick{color:var(--teal);font-weight:800;letter-spacing:.14em;font-size:12px;text-transform:uppercase}
+.hero h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:12px auto 10px;max-width:720px}
+.hero h1 span{color:var(--yel)}
+.hero p{color:#D5DEEA;max-width:600px;margin:0 auto}
+.card{max-width:720px;margin:-44px auto 40px;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(14,32,56,.14);padding:34px 36px}
+@media(max-width:600px){.card{padding:24px 18px;margin:-44px 12px 30px}}
+.progress{height:8px;background:var(--light);border-radius:99px;overflow:hidden;margin-bottom:8px}
+.progress div{height:100%;background:var(--teal);width:0;transition:width .3s}
+.step{font-size:13px;color:var(--muted);font-weight:600}
+.stage{display:inline-block;background:var(--light);color:var(--navy);font-weight:700;font-size:12px;padding:3px 10px;border-radius:99px;margin:14px 0 6px}
+.q h2{font-size:21px;line-height:1.35;margin:4px 0 6px}
+.q .hint{color:var(--muted);font-size:14px;margin:0 0 18px}
+.opts{display:grid;gap:10px}
+.opt{display:block;width:100%;text-align:left;border:2px solid var(--line);background:#fff;border-radius:10px;padding:14px 16px;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--teal);background:#F2FBFA}
+.opt small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.nav{display:flex;justify-content:space-between;margin-top:18px}
+.link{background:none;border:0;color:var(--muted);font:inherit;font-size:14px;cursor:pointer;padding:6px 0}
+.btn{display:inline-block;background:var(--teal);color:var(--navy);border:0;border-radius:999px;padding:13px 26px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none;text-align:center}
+.btn:hover{filter:brightness(.95)}
+.btn.dark{background:var(--navy);color:#fff}
+form label{display:block;font-weight:600;font-size:14px;margin:14px 0 0}
+form input[type=text],form input[type=email]{display:block;width:100%;margin-top:6px;padding:12px 14px;border:2px solid var(--line);border-radius:10px;font:inherit}
+form input:focus{outline:none;border-color:var(--teal)}
+.consent{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;color:var(--muted);font-size:13px!important}
+.consent input{margin-top:3px}
+form .btn{width:100%;margin-top:20px}
+.score{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin:6px 0 10px}
+.ring{width:132px;height:132px;flex:none}
+.band{font-size:24px;font-weight:800;margin:0 0 4px}
+.band.low{color:var(--red)}.band.mid{color:#C98A00}.band.high{color:var(--teal-d)}
+.fix{list-style:none;padding:0;margin:14px 0 0}
+.fix li{border-left:4px solid var(--teal);background:#F7FAFC;padding:12px 14px;border-radius:0 8px 8px 0;margin-bottom:10px;font-size:15px}
+.fix li.no{border-left-color:var(--red)}.fix li.partly{border-left-color:#E8B33D}
+.fix li b{display:block;margin-bottom:2px}
+.cta{background:var(--navy);color:#fff;border-radius:12px;padding:24px;margin-top:26px;text-align:center}
+.cta h3{margin:0 0 6px;font-size:20px}
+.cta p{color:#D5DEEA;margin:0 0 16px;font-size:15px}
+.social{text-align:center;margin-top:22px;font-size:15px;color:var(--muted)}
+.social a.s{display:inline-block;margin:8px 6px 0;padding:10px 18px;border-radius:8px;color:#fff;font-weight:700;text-decoration:none;font-size:14px}
+.yt{background:#FF0000}.tt{background:#111}
+.foot{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 30px}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<header class="bar">
+ <a class="brand" href="https://reviewconsulting.eu/">Review<span>Consulting</span></a>
+ <a class="home" href="https://reviewconsulting.eu/">&larr; reviewconsulting.eu</a>
+</header>
+
+<section class="hero">
+ <div class="kick">Free 2-minute quiz</div>
+ <h1>Is your systematic review <span>ready to submit?</span></h1>
+ <p>10 quick questions on your question, protocol, search, screening, analysis and write-up. Get your readiness score and a personal list of what to fix. Works for reviews, meta-analyses, manuscripts and university projects (theses, dissertations).</p>
+</section>
+
+<main class="card" id="app">
+ <div id="quiz">
+  <div class="progress"><div id="bar"></div></div>
+  <div class="step" id="step"></div>
+  <div class="q" id="q"></div>
+  <div class="nav"><button class="link" id="back" type="button">&larr; Back</button><span></span></div>
+ </div>
+
+ <div id="gate" class="hidden">
+  <div class="progress"><div style="width:100%"></div></div>
+  <h2 style="margin:16px 0 6px">Your results are ready</h2>
+  <p style="color:var(--muted);margin:0">Where should I send them? You will see your score straight away on this page, and get the free <b>Systematic Review Starter Kit</b> plus short practical tips by email.</p>
+  <form id="quizForm">
+   <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <label>First name<input type="text" name="name" required autocomplete="given-name"></label>
+   <label>Email<input type="email" name="email" required autocomplete="email"></label>
+   <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree to receive my results, the Starter Kit and occasional review tips by email. I can unsubscribe at any time.</span></label>
+   <button class="btn" type="submit">Show my results</button>
+  </form>
+ </div>
+
+ <div id="result" class="hidden"></div>
+</main>
+
+<div class="foot">&copy; Review Consulting &middot; Dr. Stylianos Sergios Chatziioannou &middot; <a href="https://reviewconsulting.eu/">https://reviewconsulting.eu</a></div>
+
+<script>
+(function(){
+var Q=[
+ {s:"Research question",q:"Is your review question written in a structured format (PICO, PCC or PEO)?",h:"For example: population, intervention, comparison and outcome in one sentence.",
+  fix:"Write your question as PICO (or PCC for scoping reviews). If you cannot fill one element, that part of the question is still open. Page 2 of the Starter Kit walks you through it."},
+ {s:"Research question",q:"Have you checked that no recent review already answers the same question?",h:"Search PROSPERO, the Cochrane Library and PubMed for reviews from the last 3 to 5 years.",
+  fix:"Search PROSPERO and the Cochrane Library before going further. If a recent review exists, you need a clear reason (new trials, a different population) to do another one."},
+ {s:"Protocol",q:"Is your protocol registered (PROSPERO, OSF or INPLASY)?",h:"Registration before the final search shows your methods were planned in advance.",
+  fix:"Register your protocol before the final search. Many journals now ask for a registration number, and it protects you from duplicate reviews."},
+ {s:"Search",q:"Have you searched at least 2 to 3 databases with a full, reproducible search string?",h:"For example PubMed, Embase and CENTRAL, with MeSH terms and AND/OR logic.",
+  fix:"Search at least 2 to 3 databases and save the full search string for each one. Use OR inside a concept and AND between concepts, plus MeSH terms."},
+ {s:"Screening",q:"Did two reviewers screen the studies independently?",h:"At title/abstract and full-text stage, with disagreements resolved by discussion or a third person.",
+  fix:"Use two independent reviewers, or at least double-screen a random 20% of records and report agreement (Cohen's kappa)."},
+ {s:"Screening",q:"Do you have a PRISMA 2020 flow diagram with exclusion reasons at full-text stage?",h:"Numbers at each stage and the reasons studies were excluded.",
+  fix:"Build a PRISMA 2020 flow diagram from your screening log, with the number excluded at each stage and the reasons at full-text stage."},
+ {s:"Quality",q:"Have you assessed risk of bias with the right tool for each study design?",h:"RoB 2 for trials, ROBINS-I for non-randomised studies, NOS or JBI for observational studies.",
+  fix:"Pick the tool by study design (RoB 2, ROBINS-I, NOS/JBI, QUADAS-2), assess per domain and show a traffic-light figure."},
+ {s:"Analysis",q:"Is your analysis plan clear (meta-analysis model, heterogeneity, or narrative synthesis)?",h:"For example random effects with I², or a structured narrative synthesis (SWiM) when pooling is not appropriate.",
+  fix:"Decide in advance: random or fixed effects, how you will report heterogeneity (I²), subgroup and sensitivity analyses, or SWiM narrative synthesis if studies cannot be pooled."},
+ {s:"Certainty",q:"Have you rated the certainty of evidence (GRADE) for your main outcomes?",h:"A Summary of Findings table, one row per key outcome.",
+  fix:"Rate certainty with GRADE (risk of bias, inconsistency, indirectness, imprecision, publication bias) and present a Summary of Findings table."},
+ {s:"Write-up",q:"Have you chosen a target journal and checked your manuscript against the PRISMA 2020 checklist?",h:"Scope, indexing, fees and author guidelines.",
+  fix:"Choose an indexed journal that publishes similar reviews, read the author guidelines twice and complete the PRISMA 2020 checklist before submission."}
+];
+var A=[{k:"yes",t:"Yes",d:"Done and documented",p:2},{k:"partly",t:"Partly / not sure",d:"Started, or I am unsure it is right",p:1},{k:"no",t:"Not yet",d:"I have not done this",p:0}];
+var ans=[],i=0;
+var $=function(id){return document.getElementById(id);};
+function render(){
+ $("bar").style.width=(i/Q.length*100)+"%";
+ $("step").textContent="Question "+(i+1)+" of "+Q.length;
+ var x=Q[i],h='<span class="stage">'+x.s+'</span><h2>'+x.q+'</h2><p class="hint">'+x.h+'</p><div class="opts">';
+ A.forEach(function(a,j){h+='<button class="opt" type="button" data-j="'+j+'">'+a.t+'<small>'+a.d+'</small></button>';});
+ $("q").innerHTML=h+'</div>';
+ $("back").style.visibility=i?"visible":"hidden";
+ [].forEach.call(document.querySelectorAll(".opt"),function(b){b.onclick=function(){ans[i]=+b.getAttribute("data-j");i++;if(i<Q.length)render();else{$("quiz").classList.add("hidden");$("gate").classList.remove("hidden");}};});
+}
+$("back").onclick=function(){if(i>0){i--;render();}};
+render();
+
+function score(){return ans.reduce(function(s,j){return s+A[j].p;},0);}
+function showResult(name){
+ var sc=score(),pct=Math.round(sc/20*100),band,cls,msg;
+ if(sc>=16){band="Nearly ready";cls="high";msg="Your review is in good shape. Fix the points below and it is close to submission.";}
+ else if(sc>=9){band="On track, with gaps";cls="mid";msg="The foundations are there, but the gaps below are the ones reviewers check first.";}
+ else{band="Early stage";cls="low";msg="You are at the start, which is the best time to get the method right. Focus on the first points below.";}
+ var C=2*Math.PI*52,off=C*(1-sc/20),col=cls=="high"?"#0E7C6F":cls=="mid"?"#E8B33D":"#E25B5B";
+ var ring='<svg class="ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="#EEF3F8" stroke-width="12"/><circle cx="60" cy="60" r="52" fill="none" stroke="'+col+'" stroke-width="12" stroke-linecap="round" stroke-dasharray="'+C.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'" transform="rotate(-90 60 60)"/><text x="60" y="58" text-anchor="middle" font-size="30" font-weight="800" fill="#0E2038" font-family="Inter,Arial">'+sc+'</text><text x="60" y="80" text-anchor="middle" font-size="13" fill="#5B6B82" font-family="Inter,Arial">out of 20</text></svg>';
+ var fixes=Q.map(function(x,k){return {x:x,j:ans[k]};}).filter(function(o){return o.j>0;}).sort(function(a,b){return b.j-a.j;});
+ var list=fixes.length?'<h3 style="margin:22px 0 0">What to fix first</h3><ul class="fix">'+fixes.map(function(o){return '<li class="'+A[o.j].k+'"><b>'+o.x.s+': '+(o.j==2?"not yet done":"needs work")+'</b>'+o.x.fix+'</li>';}).join("")+'</ul>':'<p><b>Every step is covered.</b> A final independent check before submission is still worth it.</p>';
+ var esc=function(t){return String(t||"").replace(/[<>&"]/g,"");};
+ $("result").innerHTML='<div class="progress"><div style="width:100%"></div></div><h2 style="margin:14px 0 4px">'+(name?esc(name)+", here":"Here")+' is your readiness score</h2><div class="score">'+ring+'<div><p class="band '+cls+'">'+band+'</p><p style="margin:0;color:var(--muted)">'+pct+'% ready. '+msg+'</p></div></div>'+list+
+ '<div class="cta"><h3>Want a second pair of eyes on your project?</h3><p>I help with systematic reviews, meta-analyses, manuscripts and university projects (theses, dissertations). Send me a few lines and get honest feedback within 48 hours. Free and confidential.</p><a class="btn" href="https://reviewconsulting.eu/#contact">Get your free assessment</a></div>'+
+ '<div class="social">New short tutorials every week. If they help you, please subscribe and like on YouTube and follow on TikTok.<br><a class="s yt" href="https://www.youtube.com/@ReviewConsultingSR" target="_blank" rel="noopener">&#9654; Subscribe on YouTube</a><a class="s tt" href="https://www.tiktok.com/@review_consulting" target="_blank" rel="noopener">&#9834; Follow on TikTok</a></div>'+
+ '<p style="text-align:center;margin-top:18px"><button class="link" type="button" onclick="location.reload()">Retake the quiz</button></p>';
+ $("gate").classList.add("hidden");$("result").classList.remove("hidden");
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+
+$("quizForm").addEventListener("submit",function(e){
+ e.preventDefault();var f=e.target;if(f._honey.value)return;
+ var name=f.name.value.trim(),em=f.email.value.trim(),sc=score();
+ var detail=Q.map(function(x,k){return (k+1)+". "+x.s+": "+A[ans[k]].t;}).join("\n");
+ try{
+  var d=new URLSearchParams();d.set("name",name);d.set("email",em);d.set("review_type","Readiness quiz");d.set("stage","Lead: quiz score "+sc+"/20");
+  d.set("message","Completed the readiness quiz on https://reviewconsulting.eu/quiz.html. Score: "+sc+"/20.\n"+detail+"\n(consent to tips: yes)");d.set("_subject","New quiz lead ("+sc+"/20)");
+  fetch("https://script.google.com/macros/s/AKfycbwTPPy3EmPT0bE3Cc7efUi2Nzh9yl2mxcg_EvCCsn5X8-7gh6nbkYyXF2KoEqkT9cbF/exec",{method:"POST",mode:"no-cors",body:d});
+ }catch(x){}
+ try{
+  var bv=new URLSearchParams();bv.set("EMAIL",em);bv.set("email_address_check","");bv.set("locale","en");bv.set("html_type","simple");
+  fetch("https://0d967963.sibforms.com/serve/MUIFAG-Lng7GbVeFFwYb02ZLHmMB1LYnRk-PgeRmJgF0BUIYavuMZVjGryLaYrCpLAQNWvA5P12eav_4q1r0rX4eo3P2rx0suCs290TZBaHO5o9kNJRit3EXoouHXWm0R2AQGrQvIrA6WQ__quB1tOYBxXSgQJvcjnKd9NBXcqbuGtOE0TYRURHSJFqJiNUFdVMeyqS0kMiRSl6pvA==",{method:"POST",mode:"no-cors",body:bv});
+ }catch(x){}
+ showResult(name);
+});
+})();
+</script>
+</body>
+</html>
